@@ -18,6 +18,11 @@ sol_storage! {
 
 #[public]
 impl Airdrop {
+    pub fn set_merkle_root(&mut self, root: FixedBytes<32>) -> Result<(), Vec<u8>> {
+        self.merkle_root.set(root);
+        Ok(())
+    }
+
     pub fn claim(&mut self, proof: Vec<FixedBytes<32>>) -> Result<bool, Vec<u8>> {
         let user: Address = stylus_sdk::msg::sender();
 
