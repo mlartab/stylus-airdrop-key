@@ -4,17 +4,20 @@ version = "0.1.0"
 edition = "2021"
 
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "staticlib"]
 
 [dependencies]
 stylus-sdk = "=0.6.0"
-alloy-primitives = { version = "=0.7.6", default-features = false }
-alloy-sol-types = { version = "=0.7.6", default-features = false }
-miniz_oxide = { version = "=0.7.4", default-features = false }
+alloy-primitives = { version = "=0.6.4", default-features = false }
+alloy-sol-types = { version = "=0.6.4", default-features = false }
+
+[features]
+export-abi = ["stylus-sdk/export-abi"]
+
 
 [profile.release]
 codegen-units = 1
-strip = true
-lto = true
-stack-protector = false
+strip = false
+lto = false
 panic = "abort"
+opt-level = "s"
