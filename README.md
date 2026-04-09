@@ -49,6 +49,9 @@ When a user wants to claim:
 | `setMerkleRoot(bytes32)` | Set the Merkle root (owner action) |
 
 ## Quick Start
+## Build Reproducibility
+Contract size is deterministic at 8.5 KB.
+Guaranteed by `Cargo.lock` (pinned dependencies) and `rust-toolchain.toml` (pinned Rust version). 
 
 ```bash
 # Install dependencies
