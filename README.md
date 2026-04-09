@@ -16,6 +16,10 @@ When a user wants to claim:
 3. The contract verifies it against the root in milliseconds
 4. If valid and unclaimed → marked as claimed ✅
 
+## Build Reproducibility
+Contract size is deterministic at 8.5 KB.
+Guaranteed by `Cargo.lock` (pinned dependencies) and `rust-toolchain.toml` (pinned Rust version). 
+
 ## Key Numbers
 
 | Metric | Value |
@@ -25,6 +29,7 @@ When a user wants to claim:
 | On-chain storage | 32 bytes |
 | Deployment cost | ~0.000079 ETH |
 | Proof verification | ✅ Tested on-chain |
+<img width="1191" height="58" alt="Screenshot 2026-04-09 084112" src="https://github.com/user-attachments/assets/a2d41464-1c1c-4a8f-93ec-659bfc94077b" />
 
 ## Tech Stack
 
@@ -49,9 +54,7 @@ When a user wants to claim:
 | `setMerkleRoot(bytes32)` | Set the Merkle root (owner action) |
 
 ## Quick Start
-## Build Reproducibility
-Contract size is deterministic at 8.5 KB.
-Guaranteed by `Cargo.lock` (pinned dependencies) and `rust-toolchain.toml` (pinned Rust version). 
+
 
 ```bash
 # Install dependencies
