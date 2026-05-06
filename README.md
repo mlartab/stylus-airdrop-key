@@ -118,9 +118,7 @@ wasm data fee: 0.000079 ETH
 | `#[public] not found` | You are on sdk 0.4.x — upgrade to `stylus-sdk = "=0.6.0"` |
 | `--locked` error | Delete `Cargo.lock` and run `cargo generate-lockfile` |
 
-## 🐛 Bug Report Filed
-Discovered and reported a dependency conflict affecting all Stylus SDK 0.6.0 users.
-- Issue #420: [WASM Evaluation Panic in SDK 0.6.0](https://github.com/OffchainLabs/stylus-sdk-rs/issues/420)
+
 
 ## License
 
